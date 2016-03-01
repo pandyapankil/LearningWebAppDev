@@ -1,52 +1,50 @@
-body {
-  background: #f9e933;
+body{
+	background: #f9e933;
+	min-height: 100%;
 }
-
-header, main, footer {
-  min-width: 855px;
+header, main, footer{
+	min-width: 855px;
 }
-
-header .container, main .container, footer .container {
-  max-width: 855px;
-  margin: auto;
+.container{
+	max-width: 855px;
+	margin: auto;
 }
-
-header {
-  background: white;
-  overflow: auto;
+header{
+	background: white;
+	overflow: auto;
 }
-
-header h1 {
-  float: left;
-  width: 570px;
+header h1{
+	float: left;
+	width: 570px;
 }
-
-header nav {
-  float: right;
-  width: 285px;
+header nav{
+	float: right;
+	width: 285px;
 }
-
-main {
-  background: white;
-  overflow: auto;
+main{
+	background: white;
+	overflow: auto;
+	min-height: 100%;
 }
-
-main .left {
-  float: left;
-  width: 570px;
+main .container{
+	min-height: 80%;
 }
-
-main .right {
-  float: right;
-  width: 285px;
+.content{
+	float: left;
+	width: 570px;
 }
-
-footer .left {
-  float: left;
-  width: 570px;
+.image{
+	float: right;
+	width: 285px;
 }
-
-footer .sitemap {
-  float: right;
-  width: 285px;
+footer{
+	overflow: auto;
+}
+.contact{
+	float: left;
+	width: 570px;
+}
+.sitemap{
+	float: right;
+	width: 285px;
 }
