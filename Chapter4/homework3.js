@@ -83,56 +83,6 @@ var arrayContainsTwo = function(array, string) {
     $(".homework3").append("<p>" + array + "  contains the " + string + " twice :: " + count + "</p>");
 };
 
-
-var maxNum = function(nums) {
-    "use strict";
-
-    var maximum = _.max(nums);
-
-    $(".underscore").append("<p> Largest number from " + nums + " is  = " + maximum + "</p>");
-};
-
-var evenChk = function(nums) {
-    "use strict";
-
-    var i = 0,
-        evenChecker = false;
-
-    _.every(nums, function(no) {
-
-        i++;
-        return ((no % 2) !== 0);
-    });
-
-    if (i < nums.length)
-        evenChecker = !evenChecker;
-
-    $(".underscore").append("<p>" + nums + " contains at least one even number  :: " + evenChecker + "</p>");
-};
-
-var everyEven = function(nums) {
-    "use strict";
-
-    var i = 0,
-        allEven = true;
-
-    _.every(nums, function(no) {
-        i++;
-        console.log(no);
-        return ((no % 2) === 0);
-    });
-
-    if (i < nums.length)
-        allEven = false;
-
-    $(".underscore").append("<p> In " + nums + " every number is even  :: " + allEven + "</p>");
-};
-
-
-maxNum([1, 2, 3, 4]);
-evenChk([1, 2, 3, 4]);
-everyEven([1, 2, 3, 4]);
-
 function1([1, 2, 3, 4]);
 function2([1, 2, 3, 4]);
 function3([1, 2, 3, 4]);
