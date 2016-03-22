@@ -12,7 +12,7 @@ var looses=0;
 app.get('/stats',function(req,res){
 
   var data={"wins":wins,"looses":looses};
-  res.json(JSON.stringify(data));
+  res.json(data);
 
 });
 
@@ -43,7 +43,7 @@ app.post('/flip',function(req,res){
   result="lose";
   }
   var data={"result":result};
-  res.json(JSON.stringify(data));
+  res.json(data);
 
 });
 
