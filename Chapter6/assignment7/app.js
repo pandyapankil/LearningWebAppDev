@@ -2,6 +2,7 @@ var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
     mongodb = require('mongodb'),
+    openurl = require('openurl'),
     uri = 'mongodb://localhost:27017/assignment7';
 
 app.use(bodyParser.urlencoded({
@@ -63,6 +64,11 @@ app.get('/links', function(req, res) {
                 console.log(error);
                 process.exit(1);
             }
+            db.collection('rest').find({
+                "title": title
+            }).toArray(function(error, result) {
+                openurl.open(result[0].link);
+            });
             db.collection('rest').findAndModify({
                 "title": title
             }, [], {
