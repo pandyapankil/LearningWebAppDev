@@ -64,11 +64,6 @@ app.get('/links', function(req, res) {
                 console.log(error);
                 process.exit(1);
             }
-            db.collection('rest').find({
-                "title": title
-            }).toArray(function(error, result) {
-                openurl.open(result[0].link);
-            });
             db.collection('rest').findAndModify({
                 "title": title
             }, [], {
@@ -77,6 +72,12 @@ app.get('/links', function(req, res) {
                 }
             }, {
                 new: true
+            });
+            db.collection('rest').find({
+                "title": title
+            }).toArray(function(error, result) {
+                openurl.open(result[0].link);
+                res.redirect(result[0].link);
             });
         });
     });
